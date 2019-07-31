@@ -5295,7 +5295,7 @@ void TFT_eSPI_Button::drawButton(boolean inverted) {
     text    = _fillcolor;
   }
 
-  uint8_t r = min(_w, _h) / 4; // Corner radius
+  uint8_t r = TFT_min(_w, _h) / 4; // Corner radius
   _gfx->fillRoundRect(_x1, _y1, _w, _h, r, fill);
   _gfx->drawRoundRect(_x1, _y1, _w, _h, r, outline);
 
