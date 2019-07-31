@@ -27,6 +27,7 @@ function compile(rawCode, boardName, config, cb) {
     let app_dir = `${boardDirectory}/build/${boardName}`;
     let inc_src = engine.util.walk(boardIncludeDir)
                              .filter(file => path.extname(file) === ".cpp" || path.extname(file) === ".c");
+    inc_src = inc_src.reverse();
     inc_src = inc_src.concat(engine.util.walk(platformIncludeDir)
                              .filter(file => path.extname(file) === ".cpp" || path.extname(file) === ".c"));
     let inc_switch = [];
@@ -98,7 +99,7 @@ function compile(rawCode, boardName, config, cb) {
     platformCompiler.setConfig(contextBoard);
 
     engine.util.promiseTimeout(1000).then(() => {
-      return platformCompiler.compileFiles(inc_src, [], cflags, inc_switch);
+      return platformCompiler.compileFiles(inc_src, [], cflags, inc_switch, 1);
     }).then(() => {
       return platformCompiler.archiveProgram(inc_src);
     }).then(() => {

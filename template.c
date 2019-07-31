@@ -3,13 +3,13 @@
 #include <WiFiClient.h>
 #include <WiFiAP.h>
 #include <WebServer.h>
+//#### Screen SETUP ######
 #include "SPI.h"
-#include "pins_arduino.h"
-#include <Adafruit_GFX.h>
-#include <Adafruit_ILI9341.h>
-
-Adafruit_ILI9341 tft = Adafruit_ILI9341(T4_TFT_CS, T4_TFT_DC);
-
+#include <TFT_eSPI.h>
+#define BACKLIGHT_CHANNEL   ((uint8_t)1)
+#define TFT_BL              12
+TFT_eSPI tft = TFT_eSPI();   // Invoke library
+//########################
 ${EXTINC}
 
 ${VARIABLE}
@@ -18,20 +18,20 @@ ${FUNCTION}
 
 void setup()
 {
-  pinMode(T4_BUTTON1, INPUT_PULLUP);
-  pinMode(T4_BUTTON2, INPUT_PULLUP);
-  pinMode(T4_BUTTON3, INPUT_PULLUP);
-  pinMode(T4_TFT_BL, OUTPUT);
-  digitalWrite(T4_TFT_BL, HIGH);
 
-  tft.begin();
-  tft.setRotation(3);
-  tft.fillScreen(0xFFFF);
+  ledcAttachPin(TFT_BL, 1);
+  ledcSetup(BACKLIGHT_CHANNEL, 12000, 8);
+  ledcWrite(BACKLIGHT_CHANNEL, 255);
+  SPI.begin(TFT_SCLK, TFT_MISO, TFT_MOSI, -1);
+  tft.init();
+  tft.fillScreen(0x0);
+  tft.setRotation(2);
   tft.setTextSize(1);
+  tft.setSwapBytes(true);
+
 
   ${SETUP_CODE}
   ${BLOCKSETUP}
-
 
 }
 void loop()
