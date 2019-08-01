@@ -1,4 +1,5 @@
 #include <Arduino.h>
+#include <pins_arduino.h>
 #include <WiFi.h>
 #include <WiFiClient.h>
 #include <WiFiAP.h>
@@ -24,11 +25,10 @@ void setup()
   ledcWrite(BACKLIGHT_CHANNEL, 255);
   SPI.begin(TFT_SCLK, TFT_MISO, TFT_MOSI, -1);
   tft.init();
-  tft.fillScreen(0x0);
-  tft.setRotation(2);
+  tft.fillScreen(0xFFFF);
+  tft.setRotation(0);
   tft.setTextSize(1);
   tft.setSwapBytes(true);
-
 
   ${SETUP_CODE}
   ${BLOCKSETUP}

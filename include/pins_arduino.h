@@ -14,33 +14,34 @@
 static const uint8_t TXD0 = 1;
 static const uint8_t RXD0 = 3;
 
-static const uint8_t T4_TFT_CLK = 18;
-static const uint8_t T4_TFT_RST = 5;
-static const uint8_t T4_TFT_MOSI = 23;
-static const uint8_t T4_TFT_MISO = 12;
-static const uint8_t T4_TFT_CS = 27;
-static const uint8_t T4_TFT_DC = 26;
-static const uint8_t T4_TFT_BL = 4;
+static const uint8_t TFT_SCLK = 18;
+static const uint8_t TFT_RST = -1;
+static const uint8_t TFT_MOSI = 19;
+static const uint8_t TFT_MISO = -1;
+static const uint8_t TFT_CS = 5;
+static const uint8_t TFT_DC = 27;
+static const uint8_t TFT_BL = 12;
 
-static const uint8_t T4_SD_CLK = 14;
-static const uint8_t T4_SD_MOSI = 15;
-static const uint8_t T4_SD_MISO = 2;
-static const uint8_t T4_SD_CS = 13;
+static const uint8_t SD_SCLK = 14;
+static const uint8_t SD_MOSI = 15;
+static const uint8_t SD_MISO = 2;
+static const uint8_t SD_SS = 13;
 
-static const uint8_t T4_BUTTON1 = 38;
-static const uint8_t T4_BUTTON2 = 37;
-static const uint8_t T4_BUTTON3 = 39;
+static const uint8_t USER_BUTTON = 36;
 
-static const uint8_t T4_SDA0 = 21;
-static const uint8_t T4_SCL0 = 22;
+static const uint8_t TOUCH_SDA = 23;
+static const uint8_t TOUCH_SCL = 32;
 
-static const uint8_t T4_GPIO35 = 35;
-static const uint8_t T4_GPIO34= 34;
-static const uint8_t T4_GPIO33 = 33;
-static const uint8_t T4_GPIO25= 25;
-static const uint8_t T4_GPIO19= 19;
-static const uint8_t T4_GPIO4= 4;
-static const uint8_t T4_GPIO0= 0;
+static const uint8_t SENSOR_SDA = 21;
+static const uint8_t SENSOR_SCL = 22;
 
+static const uint8_t UART_TX = 33;
+static const uint8_t UART_RX = 34;
+
+static const uint8_t RTC_INT = 37;
+static const uint8_t TOUCH_INT = 38;
+static const uint8_t AXP202_INT = 35;
+static const uint8_t BMA423_INT1 = 39;
+static const uint8_t BMA423_INT2 = 0;
 
 #endif /* Pins_Arduino_h */
