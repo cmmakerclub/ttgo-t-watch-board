@@ -19,11 +19,13 @@ ${FUNCTION}
 
 void setup()
 {
+  Wire.begin(TOUCH_SDA, TOUCH_SCL);
+  SPI.begin(TFT_SCLK, TFT_MISO, TFT_MOSI, -1); 
 
   ledcAttachPin(TFT_BL, 1);
   ledcSetup(BACKLIGHT_CHANNEL, 12000, 8);
   ledcWrite(BACKLIGHT_CHANNEL, 255);
-  SPI.begin(TFT_SCLK, TFT_MISO, TFT_MOSI, -1);
+
   tft.init();
   tft.fillScreen(0xFFFF);
   tft.setRotation(0);

@@ -382,13 +382,13 @@ module.exports = function(Blockly) {
       this.appendValueInput("x")
         // .appendField(new Blockly.FieldImage("https://www.flaticon.com/premium-icon/icons/svg/1163/1163412.svg", 20, 20, "*"))
         .setCheck("Number")
-        .appendField("set pixel (X");
+        .appendField("draw pixel (X");
       this.appendValueInput("y")
         .setCheck("Number")
         .appendField(",Y");
-      this.appendDummyInput()
-        .appendField(")  white color")
-        .appendField(new Blockly.FieldCheckbox("TRUE"), "color");
+        this.appendDummyInput()
+        .appendField(") color")
+        .appendField(new Blockly.FieldColour("#000000"), "COLOR");
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);

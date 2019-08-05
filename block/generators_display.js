@@ -250,14 +250,11 @@ module.exports = function(Blockly) {
     var value_y = Blockly.JavaScript.valueToCode(block,
       "y",
       Blockly.JavaScript.ORDER_ATOMIC);
-    var checkbox_color = (block.getFieldValue("color") == "TRUE")
-      ? "WHITE"
-      : "BLACK";
-    var code = `
-display.setColor(${checkbox_color});
-display.setPixel(${value_x}, ${value_y});
-display.setColor(WHITE);
-`;
+    var value_color = rgbto16bit(block.getFieldValue("COLOR"));  
+    var code = 
+    `
+    tft.drawPixel(${value_x}, ${value_y}, 0x${value_color});
+    `;
     return code;
   };
 

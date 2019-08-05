@@ -138,6 +138,21 @@ module.exports = {
                         </value>
                     </block>`
         },
+        {
+            xml:
+              `<block type="i2c128x64_display_draw_pixel">
+                          <value name="x">
+                              <shadow type="math_number">
+                                  <field name="NUM">0</field>
+                              </shadow>
+                          </value>
+                          <value name="y">
+                              <shadow type="math_number">
+                                  <field name="NUM">0</field>
+                              </shadow>
+                          </value>
+                      </block>`
+          },
         "basic_string"
   ]
 };
