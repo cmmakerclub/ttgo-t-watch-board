@@ -152,7 +152,7 @@ module.exports = function(Blockly) {
     init: function() {
       this.appendDummyInput()
         // .appendField(new Blockly.FieldImage("https://www.flaticon.com/premium-icon/icons/svg/1163/1163412.svg", 20, 20, "*"))
-        .appendField("display setRotaion")
+        .appendField("display setRotation")
         .appendField(new Blockly.FieldDropdown([
             ["TOP", "0"],
             ["RIGHT", "1"],
@@ -172,7 +172,7 @@ module.exports = function(Blockly) {
     init: function() {
       this.appendDummyInput()
         // .appendField(new Blockly.FieldImage("https://www.flaticon.com/premium-icon/icons/svg/1163/1163412.svg", 20, 20, "*"))
-        .appendField("dispaly fillScreen:")
+        .appendField("display fillScreen:")
         .appendField(new Blockly.FieldColour("#000000"), "COLOR");
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);

@@ -2,6 +2,8 @@ let display = require("./menu/config.group.display");
 let common = require("./menu/config.group.common");
 let gpio = require("./menu/config.group.gpio");
 let sdcard = require("./menu/config.group.sdcard");
+let time = require("./menu/config.group.time");
+
 
 module.exports = {
   //language=HTML format=false
@@ -13,6 +15,7 @@ module.exports = {
     gpio,
     display,
     sdcard,
+    time,
     ...common
   ]
 };
