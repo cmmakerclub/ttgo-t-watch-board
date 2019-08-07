@@ -4,6 +4,7 @@
 #include <WiFiClient.h>
 #include <WiFiAP.h>
 #include <WebServer.h>
+#include <Wire.h>
 //#### Screen SETUP ######
 #include "SPI.h"
 #include <TFT_eSPI.h>
