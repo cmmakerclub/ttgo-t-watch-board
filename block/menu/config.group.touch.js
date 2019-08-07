@@ -1,7 +1,7 @@
 module.exports = {
   name: "Touch",
   color: "65",
-  icon: "/static/icons/icons8_serial_tasks_96px.png",
+  icon: "/static/icons/icons8_module_96px.png",
   blocks: [
      "touch_begin",
      'touch_condition',
