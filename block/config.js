@@ -4,6 +4,8 @@ let gpio = require("./menu/config.group.gpio");
 let sdcard = require("./menu/config.group.sdcard");
 let time = require("./menu/config.group.time");
 let touch = require("./menu/config.group.touch");
+let acceleraation = require("./menu/config.group.accel");
+
 
 module.exports = {
   //language=HTML format=false
@@ -15,6 +17,7 @@ module.exports = {
     gpio,
     display,
     touch,
+    acceleraation,
     sdcard,
     time,
     ...common

@@ -22,6 +22,8 @@ module.exports = {
                             </shadow>
                         </value>
                     </block>`
-                }
+                },
+                "time_millis",
+        "time_micros"
   ]
 };

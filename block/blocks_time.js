@@ -134,7 +134,7 @@ Blockly.Blocks['time_get_second'] = {
 Blockly.Blocks['time_millis'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("timestamp millisecond");
+        .appendField("get millisecond");
     this.setInputsInline(true);
     this.setOutput(true, ["Number","uint32_t"]);
     this.setColour(0);
@@ -146,7 +146,7 @@ Blockly.Blocks['time_millis'] = {
 Blockly.Blocks['time_micros'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("timestamp microsecond");
+        .appendField("get microsecond");
     this.setInputsInline(true);
     this.setOutput(true,["Number","uint32_t"]);
     this.setColour(0);
