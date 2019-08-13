@@ -5,7 +5,7 @@ let sdcard = require("./menu/config.group.sdcard");
 let time = require("./menu/config.group.time");
 let touch = require("./menu/config.group.touch");
 let acceleraation = require("./menu/config.group.accel");
-
+let axp = require("./menu/config.group.axp");
 
 module.exports = {
   //language=HTML format=false
@@ -18,6 +18,7 @@ module.exports = {
     display,
     touch,
     acceleraation,
+    // axp,
     sdcard,
     time,
     ...common
