@@ -5,12 +5,13 @@
 #include "pins_arduino.h"
 
 typedef enum {
-    DIRECTION_TOP_EDGE        = 0,   
-    DIRECTION_BOTTOM_EDGE     = 1,   
-    DIRECTION_LEFT_EDGE       = 2,    
-    DIRECTION_RIGHT_EDGE      = 3,   
-    DIRECTION_DISP_UP         = 4,   
-    DIRECTION_DISP_DOWN       = 5   
+    DIRECTION_DISP_DOWN       = 0,
+    DIRECTION_BOTTOM_EDGE     = 1,
+    DIRECTION_LEFT_EDGE       = 2,
+    DIRECTION_TOP_EDGE        = 3,
+    DIRECTION_RIGHT_EDGE      = 4,    
+    DIRECTION_DISP_UP         = 5 
+       
 } direction_t;
 
 typedef enum {

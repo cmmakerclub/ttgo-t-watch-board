@@ -6,40 +6,40 @@ module.exports = function(Blockly) {
   Blockly.JavaScript["bma_acceleration_begin"] = function(block) {
     var code =
 `
-#EXTINC#include "motion_task.h"#END
-#VARIABLEQueueHandle_t g_event_queue_handle = NULL;
-static EventGroupHandle_t motionEventGroup = NULL;
-#END
+#EXTINC#include "CMMC_BMA423.h"#END
 
-motion_task_init();\n
+
+#VARIABLEBMA423 bma;#END
+
+bma.begin();\n
 `
 ;
     return code;
   };
 
   Blockly.JavaScript['bma_get_direction'] = function(block) {
-    var code = 'motion_handle_direction(0)';
+    var code = 'bma.motion_direction()';
     return [code, Blockly.JavaScript.ORDER_NONE];
   };
 
   Blockly.JavaScript['bma_get_accel_x'] = function(block) {
-    var code = 'motion_handle_direction(1)';
+    var code = 'bma.motion_x_axis()';
     return [code, Blockly.JavaScript.ORDER_NONE];
   };
 
   Blockly.JavaScript['bma_get_accel_y'] = function(block) {
-    var code = 'motion_handle_direction(2)';
+    var code = 'bma.motion_y_axis()';
     return [code, Blockly.JavaScript.ORDER_NONE];
   };
 
   Blockly.JavaScript['bma_get_accel_z'] = function(block) {
-    var code = 'motion_handle_direction(3)';
+    var code = 'bma.motion_z_axis()';
     return [code, Blockly.JavaScript.ORDER_NONE];
   };
 
   Blockly.JavaScript['bma_get_stepwalk'] = function(block) {
     
-    var code = 'motion_handle_stepwalk()';
+    var code = 'bma.motion_stepcount()';
 
     return [code, Blockly.JavaScript.ORDER_NONE];
   };

@@ -7,7 +7,7 @@ module.exports = {
      'bma_get_direction',
      'bma_get_accel_x',
      'bma_get_accel_y',
-     'bma_get_accel_z'
-    //  'bma_get_stepwalk'
+     'bma_get_accel_z',
+     'bma_get_stepwalk'
   ]
 };

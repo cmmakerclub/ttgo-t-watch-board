@@ -25,6 +25,7 @@ static uint16_t bma423_accel_enable();
 static uint16_t bma_get_dir(direction_t *result);
 static uint16_t configure_interrupt();
 static uint16_t bma423_read_temp(float *temp, uint8_t unit = BMA4_DEG);
+static void bma423_soft_reset();
 uint8_t direction = 0;
 static int16_t xAcc, yAcc, zAcc = 0;
 
@@ -35,7 +36,6 @@ static int16_t xAcc, yAcc, zAcc = 0;
 static void motion_task(void *param)
 {
     float temp;
-    
     struct bma4_accel sens_data;
     char buf[64];
     for (;;) {
@@ -63,7 +63,7 @@ static void motion_task(void *param)
             } else if (int_status & BMA423_WAKEUP_INT) {
                 Serial.printf("BMA423_WAKEUP_INT\n");
             }
-            xEventGroupClearBits(motionEventGroup,  MOTION_GET_SETP_BIT );
+            xEventGroupClearBits(motionEventGroup,  MOTION_GET_SETP_BIT);
         }
     }
 }
@@ -85,7 +85,7 @@ int motion_handle_direction(int mode)
 unsigned int motion_handle_stepwalk()
 {
     xEventGroupSetBits(motionEventGroup, MOTION_GET_SETP_BIT);
-    return (uint16_t)step_counter;
+    return (uint16_t)stepwalk;
 }
 
 bool motion_task_init()
@@ -103,7 +103,7 @@ bool motion_task_init()
     bmd4_dev.resolution      = 12;
     bmd4_dev.feature_len     = BMA423_FEATURE_SIZE;
 
-    // bma423_soft_reset();
+    bma423_soft_reset();
 
     rslt = bma423_init(&bmd4_dev);
     if (rslt != BMA4_OK) {
@@ -124,6 +124,12 @@ bool motion_task_init()
     return true;
 }
 
+static void bma423_soft_reset()
+{
+    uint8_t reg = 0xB6;
+    _bma423_write(BMA4_I2C_ADDR_SECONDARY, 0x7E, &reg, 1);
+    delay(5);
+}
 
 #define ENABLE_BMA_INT1
 static uint16_t configure_interrupt()
@@ -197,7 +203,6 @@ static uint16_t configure_interrupt()
     }, FALLING);
 #endif
 }
-
 
 static uint16_t bma_get_dir(direction_t *result)
 {
