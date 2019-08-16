@@ -83,7 +83,7 @@ unsigned int BMA423::motion_stepcount() {
 }
 
 void BMA423::clear_stepcount() {
-  _stepCount = 0;
+  bma423_reset_step_counter(&bmd4_dev);
 }
 
 int BMA423::motion_x_axis() {
@@ -210,10 +210,11 @@ uint16_t BMA423::configure_interrupt()
     rslt |= bma423_step_counter_set_watermark(100, &bmd4_dev);
     rslt |= bma423_reset_step_counter(&bmd4_dev);
     rslt |= bma423_feature_enable(BMA423_STEP_CNTR, BMA4_ENABLE, &bmd4_dev);
+    rslt |= bma423_feature_enable(BMA423_ACTIVITY, BMA4_ENABLE, &bmd4_dev);
     rslt |= bma423_feature_enable(BMA423_WAKEUP, BMA4_ENABLE, &bmd4_dev);
     rslt |= bma423_step_detector_enable(BMA4_ENABLE, &bmd4_dev);
 
-    rslt |= bma423_map_interrupt(BMA4_INTR1_MAP, BMA423_STEP_CNTR_INT | BMA423_WAKEUP_INT, BMA4_ENABLE, &bmd4_dev);
+    rslt |= bma423_map_interrupt(BMA4_INTR1_MAP, BMA423_ACTIVITY_INT | BMA423_STEP_CNTR_INT | BMA423_WAKEUP_INT, BMA4_ENABLE, &bmd4_dev);
     struct bma4_int_pin_config config ;
     config.edge_ctrl = BMA4_LEVEL_TRIGGER;
     config.lvl = BMA4_ACTIVE_HIGH;

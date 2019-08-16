@@ -50,5 +50,12 @@ bma.begin();\n
 
     return code;
   };
+
+  Blockly.JavaScript['bma_get_activity'] = function(block) {
+    
+    var code = 'bma.motion_activity()';
+
+    return [code, Blockly.JavaScript.ORDER_NONE];
+  };
 // ######################################################################
 };

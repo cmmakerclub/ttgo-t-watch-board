@@ -81,5 +81,15 @@ module.exports = function(Blockly) {
      this.setHelpUrl("");
     }
   };
-// ######################################################################
+
+  Blockly.Blocks['bma_get_activity'] = {
+    init: function() {
+      this.appendDummyInput()
+          .appendField("Get Activity");
+      this.setOutput(true, null);
+      this.setColour(65);
+   this.setTooltip("");
+   this.setHelpUrl("");
+    }
+  };
 };
