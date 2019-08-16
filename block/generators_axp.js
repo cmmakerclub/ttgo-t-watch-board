@@ -4,12 +4,21 @@ module.exports = function(Blockly) {
   const valueToCode = (a, b) => Blockly.JavaScript.valueToCode(a, b);
 
 
+
   Blockly.JavaScript['axp_power_begin'] = function(block) {
   // TODO: Assemble JavaScript into code variable.
    var code =
 `
 #EXTINC#include "axp20x.h"#END
 #VARIABLE AXP20X_Class axp;
+
+  Blockly.JavaScript["bma_acceleration_begin"] = function(block) {	
+     var code =
+#EXTINC#include "motion_task.h"#END
+#VARIABLEQueueHandle_t g_event_queue_handle = NULL;
+static EventGroupHandle_t motionEventGroup = NULL;
+    
+
 #END
     axp.begin(Wire1);
     axp.setPowerOutPut(AXP202_LDO2, AXP202_ON);
@@ -25,6 +34,7 @@ module.exports = function(Blockly) {
 ;
   return code;
   };
+
   Blockly.JavaScript['ischargeing'] = function(block) {
   // TODO: Assemble JavaScript into code variable.
   var code = 'axp.isChargeing()';
@@ -86,4 +96,35 @@ Blockly.JavaScript['getbattpercentage'] = function(block) {
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
  
+
+
+ Blockly.JavaScript['bma_get_direction'] = function(block) {
+    var code = 'motion_handle_direction(0)';
+    return [code, Blockly.JavaScript.ORDER_NONE];
+  };
+
+  Blockly.JavaScript['bma_get_accel_x'] = function(block) {
+    var code = 'motion_handle_direction(1)';
+    return [code, Blockly.JavaScript.ORDER_NONE];
+  };
+
+  Blockly.JavaScript['bma_get_accel_y'] = function(block) {
+    var code = 'motion_handle_direction(2)';
+    return [code, Blockly.JavaScript.ORDER_NONE];
+  };
+
+  Blockly.JavaScript['bma_get_accel_z'] = function(block) {
+    var code = 'motion_handle_direction(3)';
+    return [code, Blockly.JavaScript.ORDER_NONE];
+  };
+
+Blockly.JavaScript['bma_get_stepwalk'] = function(block) {
+
+    var code = 'motion_handle_stepwalk()';
+
+    return [code, Blockly.JavaScript.ORDER_NONE];
+};
+// ######################################################################
+
+
 };
