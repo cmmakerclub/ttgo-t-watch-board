@@ -43,5 +43,12 @@ bma.begin();\n
 
     return [code, Blockly.JavaScript.ORDER_NONE];
   };
+
+  Blockly.JavaScript['bma_clear_stepwalk'] = function(block) {
+    
+    var code = 'bma.clear_stepcount();';
+
+    return code;
+  };
 // ######################################################################
 };

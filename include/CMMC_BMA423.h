@@ -29,10 +29,12 @@ public:
   void begin();
   int motion_direction();
   unsigned int motion_stepcount();
+  void clear_stepcount();
   int motion_x_axis();
   int motion_y_axis();
   int motion_z_axis();
   uint16_t motion_activity();
+
 
   
 protected:
@@ -41,6 +43,7 @@ private:
 	uint8_t direction = 0;
     int16_t xAcc, yAcc, zAcc = 0;
     uint32_t stepCount = 0;
+    uint32_t _stepCount = 0;
     uint8_t activity;
 
 	static uint16_t _bma423_read(uint8_t dev_addr, uint8_t reg_addr, uint8_t *read_data, uint16_t len);

@@ -66,7 +66,6 @@ int BMA423::motion_direction() {
 unsigned int BMA423::motion_stepcount() {
 	uint16_t rlst;
 	uint16_t int_status = 0;
-	char buf[64];
 
 	rlst = bma423_read_int_status(&int_status, &bmd4_dev);
 
@@ -74,12 +73,17 @@ unsigned int BMA423::motion_stepcount() {
 		// Serial.printf("Step count\n");
     	if (bma423_step_counter_output(&stepCount, &bmd4_dev) == BMA4_OK) {
       		// Serial.println(stepCount);
+          _stepCount = stepCount;
     	}
   	} else if (int_status & BMA423_WAKEUP_INT) {
   		// Serial.printf("BMA423_WAKEUP_INT\n");
   	}
 
-  	return stepCount;
+  	return _stepCount;
+}
+
+void BMA423::clear_stepcount() {
+  _stepCount = 0;
 }
 
 int BMA423::motion_x_axis() {

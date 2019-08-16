@@ -1,7 +1,7 @@
 module.exports = {
   name: "Power Management",
   color: "240",
-  icon: "/static/icons/bh1745.jpg",
+  icon: "/static/icons/icons8_disconnected_96px.png",
   blocks: [
      'axp_power_begin',
      'ischargeing',
@@ -10,9 +10,19 @@ module.exports = {
      'getvbusvoltage',
      'getvbuscurrent',
      //'getbattinpower',
-     'gettemp',
      'getbattvoltage',
      //'getacinvoltage',
-     'getbattpercentage'
+     'getbattpercentage',
+     'gettemp',
+     {
+      xml:
+        `<block type="setBlackLight">
+          <value name="VALUE">
+            <shadow type="math_number">
+              <field name="NUM">255</field>
+            </shadow>
+          </value>
+        </block>`
+      }
   ]
 };

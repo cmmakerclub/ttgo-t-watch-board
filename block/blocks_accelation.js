@@ -68,5 +68,18 @@ module.exports = function(Blockly) {
    this.setHelpUrl("");
     }
   };
+
+  Blockly.Blocks['bma_clear_stepwalk'] = {
+    init: function() {
+      this.appendDummyInput()
+          .appendField("Clear step count");
+      this.setInputsInline(true);
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      this.setColour(65);
+     this.setTooltip("");
+     this.setHelpUrl("");
+    }
+  };
 // ######################################################################
 };

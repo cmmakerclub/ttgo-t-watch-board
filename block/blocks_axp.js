@@ -4,7 +4,7 @@ module.exports = function(Blockly) {
 Blockly.Blocks['axp_power_begin'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("axp_power_begin");
+        .appendField("Power Management Begin");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -17,7 +17,7 @@ Blockly.Blocks['axp_power_begin'] = {
 Blockly.Blocks['ischargeing'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("isChargeing");
+        .appendField("is Charging");
     this.setInputsInline(true);
     this.setOutput(true, "Number");
     this.setColour(20);
@@ -25,10 +25,11 @@ Blockly.Blocks['ischargeing'] = {
  this.setHelpUrl("");
   }
 };
+
 Blockly.Blocks['getbattchargecurrent'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("getBattChargeCurrent");
+        .appendField("Get Battery Charge Current (mA)");
     this.setInputsInline(true);
     this.setOutput(true, "float");
     this.setColour(20);
@@ -36,10 +37,11 @@ Blockly.Blocks['getbattchargecurrent'] = {
  this.setHelpUrl("");
   }
 };
+
 Blockly.Blocks['getbattdischargecurrent'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("getBattDischargeCurrent");
+        .appendField("Get Battery Discharge Current (mA)");
     this.setInputsInline(true);
     this.setOutput(true, "float");
     this.setColour(20);
@@ -47,10 +49,11 @@ Blockly.Blocks['getbattdischargecurrent'] = {
  this.setHelpUrl("");
   }
 };
+
 Blockly.Blocks['getvbusvoltage'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("getVbusVoltage");
+        .appendField("Get Vbus Voltage (mV)");
     this.setInputsInline(true);
     this.setOutput(true, "float");
     this.setColour(20);
@@ -58,10 +61,11 @@ Blockly.Blocks['getvbusvoltage'] = {
  this.setHelpUrl("");
   }
 };
+
 Blockly.Blocks['getvbuscurrent'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("getVbusCurrent");
+        .appendField("Get Vbus Current (mA)");
     this.setInputsInline(true);
     this.setOutput(true, "float");
     this.setColour(20);
@@ -69,10 +73,11 @@ Blockly.Blocks['getvbuscurrent'] = {
  this.setHelpUrl("");
   }
 };
+
 Blockly.Blocks['getbattinpower'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("getBattInpower");
+        .appendField("Get Battery Power");
     this.setInputsInline(true);
     this.setOutput(true, "float");
     this.setColour(20);
@@ -80,10 +85,11 @@ Blockly.Blocks['getbattinpower'] = {
  this.setHelpUrl("");
   }
 };
+
 Blockly.Blocks['gettemp'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("getTemp");
+        .appendField("Get Temperature inside (Celsius)");
     this.setInputsInline(true);
     this.setOutput(true, "float");
     this.setColour(20);
@@ -91,10 +97,11 @@ Blockly.Blocks['gettemp'] = {
  this.setHelpUrl("");
   }
 };
+
 Blockly.Blocks['getbattvoltage'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("getBattVoltage");
+        .appendField("Get Battery Voltage (mV)");
     this.setInputsInline(true);
     this.setOutput(true, "float");
     this.setColour(20);
@@ -102,10 +109,11 @@ Blockly.Blocks['getbattvoltage'] = {
  this.setHelpUrl("");
   }
 };
+
 Blockly.Blocks['getacinvoltage'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("getAcinVoltage");
+        .appendField("Get Acin Voltage");
     this.setInputsInline(true);
     this.setOutput(true, "float");
     this.setColour(20);
@@ -113,10 +121,11 @@ Blockly.Blocks['getacinvoltage'] = {
  this.setHelpUrl("");
   }
 };
+
 Blockly.Blocks['getbattpercentage'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("getBattPercentage");
+        .appendField("Get Battery Percentage (%)");
     this.setInputsInline(true);
     this.setOutput(true, "Number");
     this.setColour(20);
@@ -124,6 +133,23 @@ Blockly.Blocks['getbattpercentage'] = {
  this.setHelpUrl("");
   }
 };
-///////////////////////////////////////////////////////
+
+Blockly.Blocks['setBlackLight'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("Set Black Light");
+    this.appendValueInput("VALUE")
+        .setCheck("Number");
+    this.appendDummyInput()
+        .appendField("(0-255)");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(20);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
 
 };
