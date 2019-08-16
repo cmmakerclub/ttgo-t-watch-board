@@ -3,11 +3,16 @@ module.exports = {
   color: "240",
   icon: "/static/icons/bh1745.jpg",
   blocks: [
-     'bma_acceleration_begin',
-     // 'bma_get_direction',
-     // 'bma_get_accel_x',
-     // 'bma_get_accel_y',
-     // 'bma_get_accel_z'
-    //  'bma_get_stepwalk'
+     'axp_power_begin',
+     'ischargeing',
+     'getbattchargecurrent',
+     'getbattdischargecurrent',
+     'getvbusvoltage',
+     'getvbuscurrent',
+     //'getbattinpower',
+     'gettemp',
+     'getbattvoltage',
+     //'getacinvoltage',
+     'getbattpercentage'
   ]
 };

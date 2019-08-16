@@ -18,7 +18,7 @@ module.exports = {
     display,
     touch,
     acceleraation,
-    // axp,
+    axp,
     sdcard,
     time,
     ...common
