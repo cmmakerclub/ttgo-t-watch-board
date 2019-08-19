@@ -18,7 +18,7 @@ module.exports = function(Blockly) {
     init: function() {
       this.appendDummyInput()
           .appendField("Get direction");
-      this.setOutput(true, null);
+      this.setOutput(true, "Number");
       this.setColour(65);
    this.setTooltip("");
    this.setHelpUrl("");
@@ -29,7 +29,7 @@ module.exports = function(Blockly) {
     init: function() {
       this.appendDummyInput()
           .appendField("Get raw data X");
-      this.setOutput(true, null);
+      this.setOutput(true, "Number");
       this.setColour(65);
    this.setTooltip("");
    this.setHelpUrl("");
@@ -40,7 +40,7 @@ module.exports = function(Blockly) {
     init: function() {
       this.appendDummyInput()
           .appendField("Get raw data Y");
-      this.setOutput(true, null);
+      this.setOutput(true, "Number");
       this.setColour(65);
    this.setTooltip("");
    this.setHelpUrl("");
@@ -51,7 +51,7 @@ module.exports = function(Blockly) {
     init: function() {
       this.appendDummyInput()
           .appendField("Get raw data Z");
-      this.setOutput(true, null);
+      this.setOutput(true, "Number");
       this.setColour(65);
    this.setTooltip("");
    this.setHelpUrl("");
@@ -62,7 +62,7 @@ module.exports = function(Blockly) {
     init: function() {
       this.appendDummyInput()
           .appendField("Get step count");
-      this.setOutput(true, null);
+      this.setOutput(true, "Number");
       this.setColour(65);
    this.setTooltip("");
    this.setHelpUrl("");
@@ -86,7 +86,7 @@ module.exports = function(Blockly) {
     init: function() {
       this.appendDummyInput()
           .appendField("Get Activity");
-      this.setOutput(true, null);
+      this.setOutput(true, "Number");
       this.setColour(65);
    this.setTooltip("");
    this.setHelpUrl("");

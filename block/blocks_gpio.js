@@ -11,7 +11,7 @@ module.exports = function(Blockly) {
           ["KNOB (IO36)", "36"]
         ]), "PIN");
       this.setOutput(true, null);
-      this.setColour(230);
+      this.setColour(45);
       this.setTooltip("");
       this.setHelpUrl("");
     }
@@ -21,20 +21,37 @@ module.exports = function(Blockly) {
     init: function() {
       this.appendDummyInput()
         .appendField(new Blockly.FieldDropdown([
-          ["LED (IO18)", "18"],
-          ["SW1(IO0)", "0"],
-          ["PIEZO (IO25)", "25"],
-          ["KNOB (IO36)", "36"],
-          ["IO5", "5"],
-          ["SDA (IO21)", "21"],
-          ["SCL (IO22)", "22"]
+          ["USER BUTTON (IO36)", "USER_BUTTON"],
+          ["MOTOR PIN (IO33)", "MOTOR_PIN"],
+          ["SCREEN (IO12)", "TFT_BL"]
         ]), "IO_PIN");
       this.setOutput(true, null);
-      this.setColour(230);
+      this.setColour(45);
       this.setTooltip("");
       this.setHelpUrl("");
     }
   };
+
+Blockly.Blocks['io_blink_without_delay'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("Blink without delay pin");
+    this.appendValueInput("PIN")
+        .setCheck("Number");
+    this.appendDummyInput()
+        .appendField("every");
+    this.appendValueInput("DELAY")
+        .setCheck("Number");
+    this.appendDummyInput()
+        .appendField("ms");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(45);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
 
 };
 

@@ -11,6 +11,9 @@
 #define digitalPinToInterrupt(p)    (((p)<40)?(p):-1)
 #define digitalPinHasPWM(p)         (p < 34)
 
+#define TFT_WIDTH           240
+#define TFT_HEIGHT          240
+
 static const uint8_t TXD0 = 1;
 static const uint8_t RXD0 = 3;
 
@@ -27,6 +30,7 @@ static const uint8_t SD_MOSI = 15;
 static const uint8_t SD_MISO = 2;
 static const uint8_t SD_SS = 13;
 
+static const uint8_t MOTOR_PIN  = 33;
 static const uint8_t USER_BUTTON = 36;
 
 static const uint8_t TOUCH_SDA = 23;
@@ -43,5 +47,6 @@ static const uint8_t TOUCH_INT = 38;
 static const uint8_t AXP202_INT = 35;
 static const uint8_t BMA423_INT1 = 39;
 static const uint8_t BMA423_INT2 = 0;
+
 
 #endif /* Pins_Arduino_h */

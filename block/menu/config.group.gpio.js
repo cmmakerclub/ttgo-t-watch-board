@@ -3,6 +3,7 @@ module.exports = {
   color: "230",
   icon: "/static/icons/icons8_electronics_96px.png",
   blocks: [
+    "io_pin_dummy_input",
     {
       xml:
         `<block type="io_setpin">
@@ -13,8 +14,6 @@ module.exports = {
                         </value>
                     </block>`
     },
-    // "adc_pin_dummy_input",
-    // "io_pin_dummy_input",
     {
       xml:
         `<block type="io_digital_read">
@@ -95,6 +94,21 @@ module.exports = {
                             </shadow>
                         </value>
                     </block>`
+    },
+    {
+    xml:
+    `<block type="io_blink_without_delay">
+        <value name="PIN">
+            <shadow type="math_number">
+                <field name="NUM">12</field>
+            </shadow>
+        </value>
+        <value name="DELAY">
+            <shadow type="math_number">
+                <field name="NUM">1000</field>
+            </shadow>
+        </value>
+    </block>`
     }
   ]
 };

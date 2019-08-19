@@ -6,6 +6,8 @@ let time = require("./menu/config.group.time");
 let touch = require("./menu/config.group.touch");
 let acceleraation = require("./menu/config.group.accel");
 let axp = require("./menu/config.group.axp");
+let rtc = require("./menu/config.group.rtc");
+
 
 module.exports = {
   //language=HTML format=false
@@ -19,6 +21,7 @@ module.exports = {
     touch,
     acceleraation,
     axp,
+    rtc,
     sdcard,
     time,
     ...common

@@ -259,9 +259,9 @@ C:\Users\Asus\AppData\Local\Programs\kbide\boards\ttgo-t-watch\build\a4-cf-12-24
  C:\Users\Asus\AppData\Local\Programs\kbide\boards\ttgo-t-watch\include/Fonts/GFXFF/FreeSerifBoldItalic12pt7b.h \
  C:\Users\Asus\AppData\Local\Programs\kbide\boards\ttgo-t-watch\include/Fonts/GFXFF/FreeSerifBoldItalic18pt7b.h \
  C:\Users\Asus\AppData\Local\Programs\kbide\boards\ttgo-t-watch\include/Fonts/GFXFF/FreeSerifBoldItalic24pt7b.h \
- C:\Users\Asus\AppData\Local\Programs\kbide\boards\ttgo-t-watch\include/CMMC_BMA423.h \
- C:\Users\Asus\AppData\Local\Programs\kbide\boards\ttgo-t-watch\include/bma423.h \
- C:\Users\Asus\AppData\Local\Programs\kbide\boards\ttgo-t-watch\include/bma4.h \
- C:\Users\Asus\AppData\Local\Programs\kbide\boards\ttgo-t-watch\include/bma4_defs.h \
- C:\Users\Asus\AppData\Local\Programs\kbide\boards\ttgo-t-watch\include/struct_def.h \
- C:\Users\Asus\AppData\Local\Programs\kbide\boards\ttgo-t-watch\include/pins_arduino.h
+ C:\Users\Asus\AppData\Local\Programs\kbide\boards\ttgo-t-watch\include/pcf8563.h \
+ C:\Users\Asus\AppData\Local\Programs\kbide\platforms\arduino-esp32\lib\libraries_include/WiFiMulti.h \
+ C:\Users\Asus\AppData\Local\Programs\kbide\platforms\arduino-esp32\lib\libraries_include/WiFi.h \
+ C:\Users\Asus\AppData\Local\Programs\kbide\plugins\kbide-dht-library-master\src/DHTesp.h \
+ C:\Users\Asus\AppData\Local\Programs\kbide\platforms\arduino-esp32\include/KBEvent.h \
+ C:\Users\Asus\AppData\Local\Programs\kbide\platforms\arduino-esp32\lib\include/FunctionalInterrupt.h
