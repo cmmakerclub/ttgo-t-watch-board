@@ -80,7 +80,7 @@ if (wifimulti.run() == WL_CONNECTED) {
       Serial.println("Failed to sync time...");
     } else {
       Serial.println(&timeinfo, "SYNC PASS : %A, %B %d %Y %H:%M:%S");
-      rtc.setDateTime(timeinfo.tm_year, timeinfo.tm_mon + 1, timeinfo.tm_mday, timeinfo.tm_hour-1, timeinfo.tm_min, timeinfo.tm_sec);
+      rtc.setDateTime(timeinfo.tm_year, timeinfo.tm_mon + 1, timeinfo.tm_mday, timeinfo.tm_hour, timeinfo.tm_min, timeinfo.tm_sec);
       WiFi.mode(WIFI_OFF);
     }
   }
