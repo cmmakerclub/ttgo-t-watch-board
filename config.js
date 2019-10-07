@@ -1,6 +1,6 @@
 module.exports = {
   name: "ttgo-t-watch",
-  vender: "LilyGO Xin Yuan Electronic Technology Co., Ltd",
+  vendor: "TTGO",
   platform: "arduino-esp32",
   title: "TTGO T-Watch",
   description: "TTGO T-Watch",
