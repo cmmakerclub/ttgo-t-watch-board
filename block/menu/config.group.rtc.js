@@ -1,5 +1,6 @@
 module.exports = {
   name: "Real Time Clock",
+  index: 60,
   color: "240",
   icon: "/static/icons/icons8_Story_Time_96px.png",
   blocks: [

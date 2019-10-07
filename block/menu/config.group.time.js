@@ -1,5 +1,7 @@
 module.exports = {
+  override: true,
   name: "Time",
+  index: 80,
   color: "230",
   icon: "/static/icons/icons8_Story_Time_96px.png",
   blocks: [

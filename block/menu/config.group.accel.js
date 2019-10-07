@@ -1,5 +1,6 @@
 module.exports = {
   name: "Acceleration",
+  index: 40,
   color: "240",
   icon: "/static/icons/icons8_exercise_96px.png",
   blocks: [

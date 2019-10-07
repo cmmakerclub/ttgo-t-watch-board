@@ -1,5 +1,6 @@
 module.exports = {
   name: "Display",
+  index: 20,
   color: "230",
   icon: "/static/icons/icons8_picture_96px_1.png",
   blocks: [

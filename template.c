@@ -20,8 +20,8 @@ ${FUNCTION}
 
 void setup()
 {
-  Wire.begin(TOUCH_SDA, TOUCH_SCL);
-  Wire1.begin(SENSOR_SDA, SENSOR_SCL);
+  // Wire.begin(TOUCH_SDA, TOUCH_SCL);
+  // Wire1.begin(SENSOR_SDA, SENSOR_SCL);
   SPI.begin(TFT_SCLK, TFT_MISO, TFT_MOSI, -1); 
 
   ledcAttachPin(TFT_BL, 1);

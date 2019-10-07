@@ -1,5 +1,6 @@
 module.exports = {
   name: "Power Management",
+  index: 50,
   color: "240",
   icon: "/static/icons/icons8_disconnected_96px.png",
   blocks: [

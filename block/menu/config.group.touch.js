@@ -1,5 +1,6 @@
 module.exports = {
   name: "Touch",
+  index: 30,
   color: "65",
   icon: "/static/icons/icons8_module_96px.png",
   blocks: [

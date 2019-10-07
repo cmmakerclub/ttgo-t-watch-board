@@ -1,5 +1,6 @@
 module.exports = {
   name: "GPIO",
+  index: 10,
   color: "230",
   icon: "/static/icons/icons8_electronics_96px.png",
   blocks: [

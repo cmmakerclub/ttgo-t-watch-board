@@ -8,14 +8,8 @@ let acceleraation = require("./menu/config.group.accel");
 let axp = require("./menu/config.group.axp");
 let rtc = require("./menu/config.group.rtc");
 
-
 module.exports = {
-  //language=HTML format=false
-  initial_blocks: `<xml>
-                            <block type="arduino_init" deletable="false" x="-100" y="-50"></block>
-                            <block type="arduino_loop" deletable="false" x="100" y="-50"></block>
-                      </xml>`,
-  base_blocks: [ // use "blocks : [ " in normally situation but this need to override base block from esp-idf platforms
+  blocks: [
     gpio,
     display,
     touch,
@@ -23,7 +17,6 @@ module.exports = {
     axp,
     rtc,
     sdcard,
-    time,
-    ...common
-  ]
+    time
+  ],
 };
