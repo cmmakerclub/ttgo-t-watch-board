@@ -26,6 +26,7 @@ module.exports = function(Blockly) {
   TP_Point p;
   #END
   #SETUPpinMode(TOUCH_INT, INPUT);
+  Wire.begin(TOUCH_SDA, TOUCH_SCL);
   tp = new FT5206_Class();
   if (!tp->begin(Wire))
   {
