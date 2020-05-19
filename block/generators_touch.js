@@ -47,10 +47,8 @@ module.exports = function(Blockly) {
     if (tp->touched())
     {
       p = tp->getPoint();
-      int point_x = map(p.x, 240, 0, 0, 240);
-      int point_y = map(p.y, 240, 0, 0, 240);
-      point_x = 200 - point_x;
-      point_y = 200 - point_y;
+      int point_x = map(p.x, 0, 320, 0, 240);
+      int point_y = map(p.y, 0, 320, 0, 240);
       ${statements_mqtt_statement}
     }
     \n
