@@ -47,8 +47,8 @@ module.exports = function(Blockly) {
       this.appendDummyInput()
         .appendField(new Blockly.FieldImage(
           "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAABACAIAAABdtOgoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJ/SURBVHhe7ZbbdQIxDES3LgraeqiGZiiG2JLWHhmbx08Gkrk/kWU9GR/IdhNUJAAZCUBGApCRAGQkABkJQEYCkJEAZCQAGQlARgKQkQBkJAAZCUBGApCRAGQkABkJQEYCkJEAZCQAGQlARgKQkQBkJACZFwW47Nu2nc7XOP4ZbK9tv8SRgASQAP+bhQDX86k+jYo9jxDgbA+mAG/GH5GDEs393dtLQLNRZL9qTnwHs/oeHpUh18xjfHzvkBAxF/NUirf16DnQts+KsxTiwos7PXZgKkDesxrRweZw20dCGxZe+aHw9bzH33obC9p92A4WhfRF/VTszj+UrkBCxKT4sVfxm+s+8a492pO9GjMB+p6N5OqHHOk96/Ghv18U0pzTSWfdVvVTte5GMwMJKSYVyt2CPAymQbW2iUW3EzIRYMg10gztkGaGi5X/MB3rAOfGMGiqalWW9dPoEJX8CFykoikBxh/m7cUH65W9nKUA0TDAGeCQ3DD1yn/QW+TIORaznU5tu2X91Kk3mUwQwAWEDwmtG3r7CO4NjqFe2cuYfQWlUeA3YFIc/fPx0F+s8PV7s45VF7QVI/tJX7fd9CAMScCFm5OavZl5PcKrD04EJnnI9Ef4GKAC/Y4u6dAjC9Bv7gdvj/VZG5OhIw3XXPVtxeIfGsvx4GVhu3AzWqQE2LePuu/FHJ1Ga/N8r8JCgE8DPoNPI422VHrJdwjgb+mdvX6N/JG/P+g3COA7fubnX8lfNW+O+SVfQX8XCUBGApCRAGQkABkJQEYCkJEAZCQAGQlARgKQkQBkJAAZCUBGApCRAGQkABkJQEYCkJEAZCQAGQlARgKQkQBkJACV2+0HImEfdtax+UEAAAAASUVORK5CYII=",
-          128,
-          64,
+          120,
+          120,
           "click to upload",
           function(e) {
             let myself = this;
@@ -64,12 +64,12 @@ module.exports = function(Blockly) {
                 //--- resize image ---//
                 let image = nativeImage.createFromPath(imageFileName);
                 let size = image.getSize();
-                if (size.width > 128) {
-                  image = image.resize({ width: 128 });
+                if (size.width > 240) {
+                  image = image.resize({ width: 240 });
                   size = image.getSize();
                 }
-                if (size.height > 64) {
-                  image = image.resize({ height: 64 });
+                if (size.height > 240) {
+                  image = image.resize({ height: 240 });
                   size = image.getSize();
                 }
                 var buff = image.getBitmap();
@@ -84,7 +84,7 @@ module.exports = function(Blockly) {
             });
           },
           true));
-      this.appendDummyInput().appendField("image size 128 x 64");
+      this.appendDummyInput().appendField("image size 240 x 240");
 
       this.setOutput(true, "std::vector<uint16_t>");
       this.setColour(230);
