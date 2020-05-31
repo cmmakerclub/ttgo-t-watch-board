@@ -86,7 +86,7 @@ module.exports = function(Blockly) {
           true));
       this.appendDummyInput().appendField("image size 240 x 240");
 
-      this.setOutput(true, "std::vector<uint16_t>");
+      this.setOutput(true, "uint16_t *");
       this.setColour(230);
       this.setTooltip(
         "create image from PNG file (for best quality result please use size within 128x64 pixel otherwise, it'll resize)");
@@ -98,7 +98,7 @@ module.exports = function(Blockly) {
     init: function() {
       this.appendValueInput("img")
         // .appendField(new Blockly.FieldImage("https://www.flaticon.com/premium-icon/icons/svg/1163/1163412.svg", 20, 20, "*"))
-        .setCheck("std::vector<uint16_t>")
+        .setCheck("uint16_t *")
         .appendField("draw image");
       this.appendValueInput("x")
         .setCheck("Number")

@@ -22,7 +22,7 @@ module.exports = function(Blockly) {
       arr.push("0x" + out.toString(16));
     }
     console.log(raw);
-    var code = `(std::vector<uint16_t>{${arr.join(",")}})`;
+    var code = `[]() -> uint16_t * { static const uint16_t nat[] PROGMEM =  {${arr.join(",")}}; return nat;}(); `;
     return [code, Blockly.JavaScript.ORDER_ATOMIC];
   };
 
@@ -51,7 +51,7 @@ module.exports = function(Blockly) {
       // }
 
     //var code = `display.drawFastImage(${value_x}, ${value_y}, ${value_width},${value_height},${value_img}.data());\n`;
-    var code = `tft.pushImage(${value_x}, ${value_y}, ${value_width}, ${value_height}, ${value_img}.data());`;
+    var code = `tft.pushImage(${value_x}, ${value_y}, ${value_width}, ${value_height}, ${value_img});`;
 
     return code;
   };
