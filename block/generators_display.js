@@ -22,7 +22,7 @@ module.exports = function(Blockly) {
       arr.push("0x" + out.toString(16));
     }
     console.log(raw);
-    var code = `[]() -> uint16_t * { static const uint16_t nat[] PROGMEM =  {${arr.join(",")}}; return nat;}(); `;
+    var code = `[]() -> uint16_t * { static const uint16_t addr[] PROGMEM =  {${arr.join(",")}}; return addr;}();`;
     return [code, Blockly.JavaScript.ORDER_ATOMIC];
   };
 
